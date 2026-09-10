@@ -4,7 +4,7 @@ const members = {
     role: "WEBMASTER",
     department: "Executive",
     bio: "Passionate about robotics, community leadership, and embedded systems.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=1",
+    avatar: "Alone.jpg",
     linkedin: "www.linkedin.com/in/vivek-vijayan-6a7aa6281",
     github: "https://github.com",
     whatsapp: "https://wa.me/917592840401",
