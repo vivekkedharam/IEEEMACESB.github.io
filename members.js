@@ -8,7 +8,7 @@ const members = {
     linkedin: "www.linkedin.com/in/vivek-vijayan-6a7aa6281",
     github: "https://github.com",
     whatsapp: "https://wa.me/917592840401",
-    email: "vivekkedharam@gmail.com"
+    email: "email: "mailto:vivekkedharam@gmail.com""
   },
   "02": {
     name: "Member 02",
