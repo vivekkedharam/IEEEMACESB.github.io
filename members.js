@@ -1,14 +1,14 @@
 const members = {
   "01": {
-    name: "Member 01",
-    role: "Chairperson",
+    name: "VIVEK VIAYAN",
+    role: "WEBMASTER",
     department: "Executive",
     bio: "Passionate about robotics, community leadership, and embedded systems.",
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=1",
-    linkedin: "https://linkedin.com",
+    linkedin: "www.linkedin.com/in/vivek-vijayan-6a7aa6281",
     github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "member01@example.com"
+    whatsapp: "https://wa.me/917592840401",
+    email: "vivekkedharam@gmail.com"
   },
   "02": {
     name: "Member 02",
