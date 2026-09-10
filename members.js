@@ -7,6 +7,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=1",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member01@example.com"
   },
   "02": {
@@ -17,6 +18,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=2",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member02@example.com"
   },
   "03": {
@@ -27,6 +29,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=3",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member03@example.com"
   },
   "04": {
@@ -37,6 +40,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=4",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member04@example.com"
   },
   "05": {
@@ -47,6 +51,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=5",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member05@example.com"
   },
   "06": {
@@ -57,6 +62,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=6",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member06@example.com"
   },
   "07": {
@@ -67,6 +73,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=7",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member07@example.com"
   },
   "08": {
@@ -77,6 +84,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=8",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member08@example.com"
   },
   "09": {
@@ -87,6 +95,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=9",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member09@example.com"
   },
   "10": {
@@ -97,6 +106,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=10",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member10@example.com"
   },
   "11": {
@@ -107,6 +117,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=11",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member11@example.com"
   },
   "12": {
@@ -117,6 +128,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=12",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member12@example.com"
   },
   "13": {
@@ -127,6 +139,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=13",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member13@example.com"
   },
   "14": {
@@ -137,6 +150,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=14",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member14@example.com"
   },
   "15": {
@@ -147,6 +161,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=15",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member15@example.com"
   },
   "16": {
@@ -157,6 +172,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=16",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member16@example.com"
   },
   "17": {
@@ -167,6 +183,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=17",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member17@example.com"
   },
   "18": {
@@ -177,6 +194,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=18",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member18@example.com"
   },
   "19": {
@@ -187,6 +205,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=19",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member19@example.com"
   },
   "20": {
@@ -197,6 +216,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=20",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member20@example.com"
   },
   "21": {
@@ -207,6 +227,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=21",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member21@example.com"
   },
   "22": {
@@ -217,6 +238,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=22",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member22@example.com"
   },
   "23": {
@@ -227,6 +249,7 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=23",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member23@example.com"
   },
   "24": {
@@ -237,6 +260,29 @@ const members = {
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=24",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
     email: "member24@example.com"
+  },
+  "25": {
+    name: "Member 25",
+    role: "WIE Coordinator",
+    department: "Affinity Group",
+    bio: "Empowering women in engineering through targeted workshops and mentorship.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=25",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
+    email: "member25@example.com"
+  },
+  "26": {
+    name: "Member 26",
+    role: "Special Events Lead",
+    department: "Operations",
+    bio: "Directing annual flagship summits, speaker conclaves, and hackathon logistics.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=26",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    whatsapp: "https://wa.me/919999999999",
+    email: "member26@example.com"
   }
 };
