@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio & Idea Vault</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- QR Code Generator Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --text: #c9d1d9;
+      --heading: #f0f6fc;
+      --tag-bg: #21262d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 2rem 1rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* Header & Profile */
+    header { text-align: center; margin-bottom: 2.5rem; }
+    .avatar { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--accent); margin-bottom: 1rem; object-fit: cover; }
+    h1 { color: var(--heading); font-size: 2rem; margin-bottom: 0.5rem; }
+    p.tagline { color: #8b949e; margin-bottom: 1.2rem; font-size: 1.05rem; }
+
+    /* Social Links */
+    .social-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .social-links a, .btn-qr {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--card-bg); border: 1px solid var(--border);
+      color: var(--heading); padding: 0.5rem 1rem; border-radius: 8px;
+      text-decoration: none; font-size: 0.9rem; cursor: pointer; transition: 0.2s;
+    }
+    .social-links a:hover, .btn-qr:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Filter & Search Bar */
+    .controls { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .search-input {
+      background: var(--card-bg); border: 1px solid var(--border);
+      color: var(--heading); padding: 0.6rem 1rem; border-radius: 8px;
+      flex: 1; min-width: 250px; outline: none;
+    }
+    .search-input:focus { border-color: var(--accent); }
+    .filter-btn {
+      background: var(--tag-bg); border: 1px solid var(--border);
+      color: var(--text); padding: 0.5rem 0.9rem; border-radius: 6px; cursor: pointer;
+    }
+    .filter-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+
+    /* Ideas Grid */
+    .ideas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.25rem; display: flex;
+      flex-direction: column; justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
+    .tag { font-size: 0.75rem; background: var(--tag-bg); padding: 0.2rem 0.6rem; border-radius: 12px; color: var(--accent); border: 1px solid var(--border); }
+    .card-id { font-size: 0.8rem; color: #8b949e; }
+    .card h3 { color: var(--heading); margin-bottom: 0.5rem; font-size: 1.15rem; }
+    .card p { font-size: 0.9rem; line-height: 1.4; color: #8b949e; margin-bottom: 1rem; }
+    .card-link {
+      font-size: 0.85rem; color: var(--accent); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.3rem; margin-top: auto;
+    }
+
+    /* QR Code Modal */
+    .modal {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+      justify-content: center; align-items: center; z-index: 100;
+    }
+    .modal-content {
+      background: var(--card-bg); padding: 2rem; border-radius: 12px;
+      text-align: center; border: 1px solid var(--border); max-width: 320px;
+    }
+    #qrcode { display: flex; justify-content: center; margin: 1.5rem 0; }
+    .close-btn { background: var(--tag-bg); color: var(--heading); border: none; padding: 0.4rem 1rem; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img src="https://via.placeholder.com/100" alt="Avatar" class="avatar" />
+      <h1>Your Name</h1>
+      <p class="tagline">Builder & Strategist | 24 Innovative Ideas Vault</p>
+      
+      <div class="social-links">
+        <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter/X</a>
+        <a href="mailto:hello@example.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <button class="btn-qr" onclick="openQRModal()"><i class="fa-solid fa-qrcode"></i> Get QR Code</button>
+      </div>
+    </header>
+
+    <!-- Search & Filter Controls -->
+    <div class="controls">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search across 24 ideas..." oninput="filterCards()" />
+      <div id="filterButtons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;"></div>
+    </div>
+
+    <!-- Idea Cards Container -->
+    <div class="ideas-grid" id="cardsGrid"></div>
+  </div>
+
+  <!-- QR Modal -->
+  <div class="modal" id="qrModal" onclick="closeQRModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <h3 style="color:var(--heading);">Scan Portfolio</h3>
+      <p style="font-size:0.85rem; color:#8b949e; margin-top:0.4rem;">Share or open this portfolio on mobile</p>
+      <div id="qrcode"></div>
+      <button class="close-btn" onclick="closeQRModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // -------------------------------------------------------------
+    // 1. ADD YOUR 24 IDEAS HERE
+    // -------------------------------------------------------------
+    const ideas = [
+      { id: "01", category: "AI", title: "AI Local Knowledge Hub", desc: "A privacy-first personal assistant trained strictly on offline personal notes and PDF files.", link: "#" },
+      { id: "02", category: "SaaS", title: "Smart Micro-Invoicing", desc: "Automated crypto and stripe micro-billing for freelancers with milestone tracking.", link: "#" },
+      { id: "03", category: "EdTech", title: "Interactive Code Flashcards", desc: "An active-recall spaced repetition deck specifically tailored for syntax & algorithms.", link: "#" },
+      { id: "04", category: "Design", title: "Minimalist Brand Kits", desc: "Instant SVG palette and typography systems generated from aesthetic mood boards.", link: "#" },
+      { id: "05", category: "AI", title: "Voice-To-Action Agenda", desc: "Parses spoken brain-dumps into structured Notion Kanban boards automatically.", link: "#" },
+      { id: "06", category: "Hardware", title: "E-Paper Desk Companion", desc: "Low-power dashboard for real-time stock ticker, daily metrics, and weather.", link: "#" }
+      // Simply add items 07 through 24 using the exact same structure!
+    ];
+
+    // Autogenerate placeholder entries up to 24 if needed for testing:
+    for (let i = ideas.length + 1; i <= 24; i++) {
+      const pad = i < 10 ? '0' + i : i;
+      ideas.push({
+        id: pad,
+        category: i % 2 === 0 ? "Tech" : "Concept",
+        title: `Idea Project #${pad}`,
+        desc: "Add your short 1-2 sentence problem and proposed solution here.",
+        link: "#"
+      });
+    }
+
+    // -------------------------------------------------------------
+    // 2. RENDER CARDS & FILTERS
+    // -------------------------------------------------------------
+    const grid = document.getElementById("cardsGrid");
+    let activeCategory = "All";
+
+    function renderCards(list) {
+      grid.innerHTML = list.map(item => `
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="tag">${item.category}</span>
+              <span class="card-id">#${item.id}</span>
+            </div>
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+          </div>
+          <a href="${item.link}" class="card-link">Explore Idea <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      `).join('');
+    }
+
+    function setupFilters() {
+      const categories = ["All", ...new Set(ideas.map(i => i.category))];
+      const btnContainer = document.getElementById("filterButtons");
+      btnContainer.innerHTML = categories.map(c => `
+        <button class="filter-btn ${c === 'All' ? 'active' : ''}" onclick="setCategory('${c}')">${c}</button>
+      `).join('');
+    }
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.innerText === cat);
+      });
+      filterCards();
+    }
+
+    function filterCards() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = ideas.filter(item => {
+        const matchesCategory = activeCategory === "All" || item.category === activeCategory;
+        const matchesSearch = item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query);
+        return matchesCategory && matchesSearch;
+      });
+      renderCards(filtered);
+    }
+
+    // -------------------------------------------------------------
+    // 3. QR CODE GENERATOR MODAL
+    // -------------------------------------------------------------
+    let qrGenerated = false;
+    function openQRModal() {
+      document.getElementById('qrModal').style.display = 'flex';
+      if (!qrGenerated) {
+        new QRCode(document.getElementById("qrcode"), {
+          text: window.location.href,
+          width: 160,
+          height: 160,
+          colorDark: "#000000",
+          colorLight: "#ffffff"
+        });
+        qrGenerated = true;
+      }
+    }
+
+    function closeQRModal() {
+      document.getElementById('qrModal').style.display = 'none';
+    }
+
+    // Initialize
+    setupFilters();
+    renderCards(ideas);
+  </script>
+</body>
+</html>
