@@ -97,7 +97,7 @@
     <header>
       <img src="https://via.placeholder.com/100" alt="Avatar" class="avatar" />
       <h1>Your Name</h1>
-      <p class="tagline">Builder & Strategist | 24 Innovative Ideas Vault</p>
+      <p class="tagline">Builder & Strategist | 26 Innovative Ideas Vault</p>
       
       <div class="social-links">
         <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
@@ -110,7 +110,7 @@
 
     <!-- Search & Filter Controls -->
     <div class="controls">
-      <input type="text" id="searchInput" class="search-input" placeholder="Search across 24 ideas..." oninput="filterCards()" />
+      <input type="text" id="searchInput" class="search-input" placeholder="Search across 26 ideas..." oninput="filterCards()" />
       <div id="filterButtons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;"></div>
     </div>
 
@@ -143,7 +143,7 @@
     ];
 
     // Autogenerate placeholder entries up to 24 if needed for testing:
-    for (let i = ideas.length + 1; i <= 24; i++) {
+   for (let i = ideas.length + 1; i <= 26; i++) {
       const pad = i < 10 ? '0' + i : i;
       ideas.push({
         id: pad,
