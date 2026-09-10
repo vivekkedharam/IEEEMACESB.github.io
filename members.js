@@ -3,7 +3,7 @@ const members = {
     name: "VIVEK VIJAYAN",
     role: "Chairperson",
     department: "Executive",
-    bio: "Passionate about robotics, community leadership, and embedded systems.",
+    bio: "IEEE MACE SB ExeCom'26",
     avatar: "Alone.jpg",
     linkedin: "https://www.linkedin.com/in/vivek-vijayan-6a7aa6281",
     github: "https://github.com",
