@@ -5,10 +5,10 @@ const members = {
     department: "Executive",
     bio: "Passionate about robotics, community leadership, and embedded systems.",
     avatar: "Alone.jpg",
-    linkedin: "www.linkedin.com/in/vivek-vijayan-6a7aa6281",
+    linkedin: "https://www.linkedin.com/in/vivek-vijayan-6a7aa6281",,
     github: "https://github.com",
     whatsapp: "https://wa.me/917592840401",
-    email: "email: "mailto:vivekkedharam@gmail.com""
+   email: "mailto:vivekkedharam@gmail.com"
   },
   "02": {
     name: "Member 02",
