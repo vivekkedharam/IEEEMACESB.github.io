@@ -1,7 +1,7 @@
 const members = {
   "01": {
     name: "VIVEK VIJAYAN",
-    role: "WEBMASTER",
+    role: "Chairperson",
     department: "Executive",
     bio: "Passionate about robotics, community leadership, and embedded systems.",
     avatar: "Alone.jpg",
