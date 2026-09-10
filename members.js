@@ -1,33 +1,242 @@
 const members = {
-  "1": {
-    name: "Alex Rivera",
+  "01": {
+    name: "Member 01",
     role: "Chairperson",
     department: "Executive",
     bio: "Passionate about robotics, community leadership, and embedded systems.",
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=1",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "alex@example.com"
+    email: "member01@example.com"
   },
-  "2": {
-    name: "Priya Sharma",
+  "02": {
+    name: "Member 02",
     role: "Vice Chair",
     department: "Tech Lead",
     bio: "Full-stack developer focused on cloud architectures and open-source.",
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=2",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "priya@example.com"
+    email: "member02@example.com"
   },
-  "3": {
-    name: "Member Three",
+  "03": {
+    name: "Member 03",
     role: "Secretary",
     department: "Executive",
     bio: "Coordinating events, operations, and technical documentation.",
     avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=3",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    email: "member3@example.com"
+    email: "member03@example.com"
+  },
+  "04": {
+    name: "Member 04",
+    role: "Joint Secretary",
+    department: "Executive",
+    bio: "Assisting executive management, reporting, and team relations.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=4",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member04@example.com"
+  },
+  "05": {
+    name: "Member 05",
+    role: "Treasurer",
+    department: "Finance",
+    bio: "Budget allocation, sponsorship coordination, and asset tracking.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=5",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member05@example.com"
+  },
+  "06": {
+    name: "Member 06",
+    role: "Technical Coordinator",
+    department: "Tech Lead",
+    bio: "Leading development teams, hackathons, and technical projects.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=6",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member06@example.com"
+  },
+  "07": {
+    name: "Member 07",
+    role: "Webmaster",
+    department: "Development",
+    bio: "Maintaining branch platforms, portal infrastructure, and web security.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=7",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member07@example.com"
+  },
+  "08": {
+    name: "Member 08",
+    role: "Design Lead",
+    department: "Creative",
+    bio: "Visual communication, brand identity, and UI/UX design.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=8",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member08@example.com"
+  },
+  "09": {
+    name: "Member 09",
+    role: "Content Lead",
+    department: "Media",
+    bio: "Technical documentation, editorial content, and newsletters.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=9",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member09@example.com"
+  },
+  "10": {
+    name: "Member 10",
+    role: "Publicity Lead",
+    department: "Outreach",
+    bio: "Social media operations, campaign management, and engagement.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=10",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member10@example.com"
+  },
+  "11": {
+    name: "Member 11",
+    role: "Event Coordinator",
+    department: "Operations",
+    bio: "Organizing workshops, technical speaker sessions, and symposiums.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=11",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member11@example.com"
+  },
+  "12": {
+    name: "Member 12",
+    role: "Logistics Lead",
+    department: "Operations",
+    bio: "Venue planning, hardware provisioning, and on-site support.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=12",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member12@example.com"
+  },
+  "13": {
+    name: "Member 13",
+    role: "Industry Liaison",
+    department: "Corporate",
+    bio: "Connecting students with tech companies and organizing industrial visits.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=13",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member13@example.com"
+  },
+  "14": {
+    name: "Member 14",
+    role: "Membership Coordinator",
+    department: "Student Affairs",
+    bio: "Managing member onboarding, benefits, and student retention.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=14",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member14@example.com"
+  },
+  "15": {
+    name: "Member 15",
+    role: "Project Manager",
+    department: "Tech Lead",
+    bio: "Tracking timelines, milestones, and deliverables for active builds.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=15",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member15@example.com"
+  },
+  "16": {
+    name: "Member 16",
+    role: "Frontend Developer",
+    department: "Development",
+    bio: "Crafting modern, accessible web interfaces and components.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=16",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member16@example.com"
+  },
+  "17": {
+    name: "Member 17",
+    role: "Backend Developer",
+    department: "Development",
+    bio: "Building robust APIs, databases, and microservices.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=17",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member17@example.com"
+  },
+  "18": {
+    name: "Member 18",
+    role: "Hardware & IoT Lead",
+    department: "Tech Lead",
+    bio: "Microcontroller programming, circuit prototyping, and sensor networks.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=18",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member18@example.com"
+  },
+  "19": {
+    name: "Member 19",
+    role: "AI/ML Lead",
+    department: "Tech Lead",
+    bio: "Machine learning research, data pipelines, and intelligent tools.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=19",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member19@example.com"
+  },
+  "20": {
+    name: "Member 20",
+    role: "Cybersecurity Lead",
+    department: "Tech Lead",
+    bio: "Network defense, vulnerability assessments, and capture-the-flag events.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=20",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member20@example.com"
+  },
+  "21": {
+    name: "Member 21",
+    role: "Outreach Lead",
+    department: "Outreach",
+    bio: "Fostering partnerships with other institutions and local communities.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=21",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member21@example.com"
+  },
+  "22": {
+    name: "Member 22",
+    role: "Media Producer",
+    department: "Creative",
+    bio: "Video production, photography, and event coverage.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=22",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member22@example.com"
+  },
+  "23": {
+    name: "Member 23",
+    role: "Student Mentor",
+    department: "Academic",
+    bio: "Guiding junior students in foundational programming and academics.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=23",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member23@example.com"
+  },
+  "24": {
+    name: "Member 24",
+    role: "Advisory Member",
+    department: "Executive",
+    bio: "Strategic oversight, branch governance, and career advisory.",
+    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=24",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    email: "member24@example.com"
   }
-  // Continue adding keys up to "24"
 };
