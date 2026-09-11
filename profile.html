@@ -70,7 +70,7 @@
         font-weight: 600;
       }
 
-      /* Circular Avatar Mask with Draggable Content */
+      /* Circular Avatar */
       .avatar-wrapper {
         margin: 20px auto 10px;
         position: relative;
@@ -87,12 +87,15 @@
         overflow: hidden;
         position: relative;
         background: #111;
-        cursor: grab;
         user-select: none;
         touch-action: none;
       }
 
-      .avatar-frame:active {
+      .avatar-frame.admin-mode {
+        cursor: grab;
+      }
+
+      .avatar-frame.admin-mode:active {
         cursor: grabbing;
       }
 
@@ -102,61 +105,26 @@
         object-fit: cover;
         transform-origin: center center;
         pointer-events: none;
-        transition: filter 0.2s ease;
       }
 
-      .drag-hint {
-        font-size: 11px;
-        color: var(--text-secondary);
-        margin-top: 4px;
-      }
-
-      /* Avatar Editor Controls */
-      .editor-toggle-btn {
-        background: rgba(52, 152, 219, 0.2);
-        color: var(--accent);
-        border: 1px solid rgba(52, 152, 219, 0.4);
-        padding: 6px 14px;
-        font-size: 12px;
-        border-radius: 20px;
-        cursor: pointer;
-        margin: 10px auto;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s ease;
-      }
-
-      .editor-toggle-btn:hover {
-        background: var(--accent);
-        color: #fff;
-      }
-
-      .editor-panel {
+      /* Admin Control Drawer: hidden from regular visitors */
+      .admin-panel {
         display: none;
-        background: rgba(0, 0, 0, 0.45);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 14px;
         padding: 14px;
-        margin: 10px 0 16px;
+        margin: 15px 0;
         text-align: left;
-      }
-
-      .editor-panel.open {
-        display: block;
       }
 
       .control-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         font-size: 12px;
         color: var(--text-secondary);
-      }
-
-      .control-row label {
-        min-width: 65px;
       }
 
       .control-row input[type="range"] {
@@ -165,34 +133,31 @@
         accent-color: var(--accent);
       }
 
-      .btn-row {
-        display: flex;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
-      .btn-tool {
-        flex: 1;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.15);
+      .btn-save {
+        width: 100%;
+        background: #27ae60;
         color: #fff;
-        padding: 6px 8px;
+        border: none;
+        padding: 10px;
         border-radius: 8px;
-        font-size: 11px;
+        font-size: 13px;
+        font-weight: 600;
         cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.2s ease;
+      }
+
+      .btn-save:hover {
+        background: #2ecc71;
+      }
+
+      .status-text {
+        font-size: 11px;
         text-align: center;
-        transition: background 0.2s;
+        margin-top: 6px;
+        color: #2ecc71;
       }
 
-      .btn-tool:hover {
-        background: rgba(255, 255, 255, 0.18);
-      }
-
-      #fileInput {
-        display: none;
-      }
-
-      /* Bio and Contacts */
       .bio {
         color: var(--text-secondary);
         font-size: 13.5px;
@@ -230,46 +195,26 @@
         <p class="member-role" id="role">ROLE / DEPARTMENT</p>
       </div>
 
-      <!-- Avatar with Frame -->
       <div class="avatar-wrapper">
-        <div class="avatar-frame" id="avatarFrame" title="Click and drag to position image">
+        <div class="avatar-frame" id="avatarFrame">
           <img src="" alt="Profile Avatar" id="avatarImg" />
         </div>
       </div>
-      <p class="drag-hint">Drag photo inside circle to position</p>
 
-      <!-- Toggle Editor Panel Button -->
-      <button class="editor-toggle-btn" id="toggleEditorBtn">
-        <span>⚙</span> Adjust & Align Photo
-      </button>
-
-      <!-- Interactive Controls Drawer -->
-      <div class="editor-panel" id="editorPanel">
+      <!-- Admin Editor Tools -->
+      <div class="admin-panel" id="adminPanel">
         <div class="control-row">
-          <label for="zoomRange">Zoom</label>
+          <span>Zoom:</span>
           <input type="range" id="zoomRange" min="1" max="3" step="0.05" value="1" />
           <span id="zoomVal">1.0x</span>
         </div>
-
-        <div class="control-row">
-          <label for="rotateRange">Rotate</label>
-          <input type="range" id="rotateRange" min="-180" max="180" step="5" value="0" />
-          <span id="rotateVal">0°</span>
-        </div>
-
-        <div class="btn-row">
-          <button class="btn-tool" id="zoomInBtn">+ Zoom In</button>
-          <button class="btn-tool" id="zoomOutBtn">- Zoom Out</button>
-          <button class="btn-tool" id="resetBtn">Reset</button>
-        </div>
-
-        <div class="btn-row" style="margin-top: 8px;">
-          <label class="btn-tool" style="cursor:pointer;" for="fileInput">📁 Upload New Image</label>
-          <input type="file" id="fileInput" accept="image/*" />
-        </div>
+        <p style="font-size: 11px; color: var(--text-secondary); margin-bottom: 8px;">
+          👉 Drag the photo directly inside the circle to position it.
+        </p>
+        <button class="btn-save" id="saveBtn">Save Alignment</button>
+        <div class="status-text" id="statusMsg"></div>
       </div>
 
-      <!-- Bio & Links -->
       <p class="bio" id="bio"></p>
 
       <div class="contact-links">
@@ -282,18 +227,40 @@
 
     <script src="members.js"></script>
     <script>
-      // Load Profile Data from members.js
       const urlParams = new URLSearchParams(window.location.search);
-      const memberId = urlParams.get("id");
+      const memberId = urlParams.get("id") || "01";
+      const isAdmin = urlParams.get("admin") === "true";
       const data = (typeof members !== "undefined" && members[memberId]) ? members[memberId] : (typeof members !== "undefined" ? members["01"] : null);
 
       const avatarImg = document.getElementById("avatarImg");
+      const frame = document.getElementById("avatarFrame");
+      const statusMsg = document.getElementById("statusMsg");
+
+      let posX = (data && data.posX !== undefined) ? data.posX : 0;
+      let posY = (data && data.posY !== undefined) ? data.posY : 0;
+      let scale = (data && data.zoom !== undefined) ? data.zoom : 1;
+
+      // Check saved alignment from browser storage
+      const localSaved = localStorage.getItem("member_align_" + memberId);
+      if (localSaved) {
+        try {
+          const parsed = JSON.parse(localSaved);
+          posX = parsed.posX;
+          posY = parsed.posY;
+          scale = parsed.scale;
+        } catch (e) {}
+      }
+
+      function applyTransform() {
+        avatarImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+      }
 
       if (data) {
         document.getElementById("name").textContent = data.name;
         document.getElementById("role").textContent = data.role + " | " + data.department;
         document.getElementById("bio").textContent = data.bio;
         avatarImg.src = data.avatar;
+        applyTransform();
 
         if (data.linkedin) document.getElementById("linkedin").href = data.linkedin;
         if (data.github) document.getElementById("github").href = data.github;
@@ -301,122 +268,59 @@
         if (data.email) document.getElementById("email").href = data.email;
       }
 
-      // Transform state
-      let scale = 1;
-      let posX = 0;
-      let posY = 0;
-      let rotation = 0;
+      // Admin mode: only activated if URL has &admin=true
+      if (isAdmin) {
+        document.getElementById("adminPanel").style.display = "block";
+        frame.classList.add("admin-mode");
 
-      function updateTransform() {
-        avatarImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale}) rotate(${rotation}deg)`;
+        const zoomRange = document.getElementById("zoomRange");
+        const zoomVal = document.getElementById("zoomVal");
+        zoomRange.value = scale;
+        zoomVal.textContent = scale.toFixed(1) + "x";
+
+        zoomRange.addEventListener("input", (e) => {
+          scale = parseFloat(e.target.value);
+          zoomVal.textContent = scale.toFixed(1) + "x";
+          applyTransform();
+        });
+
+        let isDragging = false, startX, startY;
+        const onStart = (e) => {
+          isDragging = true;
+          const cx = e.touches ? e.touches[0].clientX : e.clientX;
+          const cy = e.touches ? e.touches[0].clientY : e.clientY;
+          startX = cx - posX;
+          startY = cy - posY;
+        };
+
+        const onMove = (e) => {
+          if (!isDragging) return;
+          const cx = e.touches ? e.touches[0].clientX : e.clientX;
+          const cy = e.touches ? e.touches[0].clientY : e.clientY;
+          posX = Math.round(cx - startX);
+          posY = Math.round(cy - startY);
+          applyTransform();
+        };
+
+        const onEnd = () => { isDragging = false; };
+
+        frame.addEventListener("mousedown", onStart);
+        window.addEventListener("mousemove", onMove);
+        window.addEventListener("mouseup", onEnd);
+        frame.addEventListener("touchstart", onStart, { passive: true });
+        window.addEventListener("touchmove", onMove, { passive: true });
+        window.addEventListener("touchend", onEnd);
+
+        // Save position permanently on device
+        document.getElementById("saveBtn").addEventListener("click", () => {
+          localStorage.setItem(
+            "member_align_" + memberId,
+            JSON.stringify({ posX, posY, scale })
+          );
+          statusMsg.textContent = "✓ Alignment saved! Stays active across refreshes.";
+          setTimeout(() => { statusMsg.textContent = ""; }, 3000);
+        });
       }
-
-      // Toggle Editor Drawer
-      const toggleBtn = document.getElementById("toggleEditorBtn");
-      const panel = document.getElementById("editorPanel");
-      toggleBtn.addEventListener("click", () => {
-        panel.classList.toggle("open");
-        toggleBtn.textContent = panel.classList.contains("open") ? "▲ Close Controls" : "⚙ Adjust & Align Photo";
-      });
-
-      // Zoom Sliders & Buttons
-      const zoomRange = document.getElementById("zoomRange");
-      const zoomVal = document.getElementById("zoomVal");
-      zoomRange.addEventListener("input", (e) => {
-        scale = parseFloat(e.target.value);
-        zoomVal.textContent = scale.toFixed(1) + "x";
-        updateTransform();
-      });
-
-      document.getElementById("zoomInBtn").addEventListener("click", () => {
-        scale = Math.min(scale + 0.15, 3);
-        zoomRange.value = scale;
-        zoomVal.textContent = scale.toFixed(1) + "x";
-        updateTransform();
-      });
-
-      document.getElementById("zoomOutBtn").addEventListener("click", () => {
-        scale = Math.max(scale - 0.15, 1);
-        zoomRange.value = scale;
-        zoomVal.textContent = scale.toFixed(1) + "x";
-        updateTransform();
-      });
-
-      // Rotation Slider
-      const rotateRange = document.getElementById("rotateRange");
-      const rotateVal = document.getElementById("rotateVal");
-      rotateRange.addEventListener("input", (e) => {
-        rotation = parseInt(e.target.value);
-        rotateVal.textContent = rotation + "°";
-        updateTransform();
-      });
-
-      // Reset
-      document.getElementById("resetBtn").addEventListener("click", () => {
-        scale = 1;
-        posX = 0;
-        posY = 0;
-        rotation = 0;
-        zoomRange.value = 1;
-        zoomVal.textContent = "1.0x";
-        rotateRange.value = 0;
-        rotateVal.textContent = "0°";
-        updateTransform();
-      });
-
-      // Drag to Position (Mouse & Touch)
-      const frame = document.getElementById("avatarFrame");
-      let isDragging = false;
-      let startX, startY;
-
-      const onStart = (e) => {
-        isDragging = true;
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-        startX = clientX - posX;
-        startY = clientY - posY;
-      };
-
-      const onMove = (e) => {
-        if (!isDragging) return;
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-        posX = clientX - startX;
-        posY = clientY - startY;
-        updateTransform();
-      };
-
-      const onEnd = () => { isDragging = false; };
-
-      frame.addEventListener("mousedown", onStart);
-      window.addEventListener("mousemove", onMove);
-      window.addEventListener("mouseup", onEnd);
-
-      frame.addEventListener("touchstart", onStart, { passive: true });
-      window.addEventListener("touchmove", onMove, { passive: true });
-      window.addEventListener("touchend", onEnd);
-
-      // Local File Upload
-      document.getElementById("fileInput").addEventListener("change", (e) => {
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            avatarImg.src = event.target.result;
-            // Reset position for new image
-            scale = 1;
-            posX = 0;
-            posY = 0;
-            rotation = 0;
-            zoomRange.value = 1;
-            zoomVal.textContent = "1.0x";
-            rotateRange.value = 0;
-            rotateVal.textContent = "0°";
-            updateTransform();
-          };
-          reader.readAsDataURL(file);
-        }
-      });
     </script>
   </body>
 </html>
