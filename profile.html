@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Member Portfolio | IEEE MACE SB</title>
-    <!-- Combined styles for the profile card -->
     <style>
       :root {
         --bg-color: #010101;
@@ -12,7 +11,7 @@
         --text-primary: #ffffff;
         --text-secondary: rgba(255, 255, 255, 0.7);
         --accent: #3498db;
-        --glow: rgba(52, 152, 219, 0.3);
+        --glow: rgba(52, 152, 219, 0.35);
       }
 
       * {
@@ -24,7 +23,7 @@
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background-color: var(--bg-color);
-        background-image: url("BG.jpeg"); /* Original background */
+        background-image: url("BG.jpeg");
         background-size: cover;
         background-position: center;
         color: var(--text-primary);
@@ -32,157 +31,392 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        padding: 20px;
+        padding: 30px 15px;
       }
 
       .portfolio-card {
         background: var(--card-bg);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 30px;
-        max-width: 380px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 24px;
+        padding: 28px 24px;
+        max-width: 400px;
         width: 100%;
         text-align: center;
         position: relative;
-        backdrop-filter: blur(5px);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      /* Hover glow effect matching the avatar glow */
-      .portfolio-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px var(--glow);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       }
 
       .top-section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
       }
 
       .member-name {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 700;
-        text-transform: uppercase;
-        margin-top: 5px;
         letter-spacing: 1px;
+        text-transform: uppercase;
       }
 
       .member-role {
-        font-size: 14px;
+        font-size: 13px;
         color: var(--accent);
-        background: rgba(52, 152, 219, 0.1);
-        padding: 6px 12px;
+        background: rgba(52, 152, 219, 0.15);
+        padding: 5px 14px;
         border-radius: 20px;
         font-weight: 600;
       }
 
-      /* Container for the new rounded photo in the central area */
-      .avatar-container {
-        margin: 30px auto;
-        width: 150px;
-        height: 150px;
+      /* Circular Avatar Mask with Draggable Content */
+      .avatar-wrapper {
+        margin: 20px auto 10px;
         position: relative;
+        width: 160px;
+        height: 160px;
       }
 
-      /* The perfectly rounded avatar image with a soft blue glow */
-      .member-avatar {
+      .avatar-frame {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 4px solid var(--accent);
+        box-shadow: 0 0 20px var(--glow);
+        overflow: hidden;
+        position: relative;
+        background: #111;
+        cursor: grab;
+        user-select: none;
+        touch-action: none;
+      }
+
+      .avatar-frame:active {
+        cursor: grabbing;
+      }
+
+      .avatar-frame img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 50%; /* Makes it circular */
-        border: 4px solid var(--accent);
-        box-shadow: 0 0 15px var(--glow); /* The visual glow frame */
+        transform-origin: center center;
+        pointer-events: none;
+        transition: filter 0.2s ease;
       }
 
-      .bottom-section {
-        margin-top: 15px;
+      .drag-hint {
+        font-size: 11px;
+        color: var(--text-secondary);
+        margin-top: 4px;
       }
 
+      /* Avatar Editor Controls */
+      .editor-toggle-btn {
+        background: rgba(52, 152, 219, 0.2);
+        color: var(--accent);
+        border: 1px solid rgba(52, 152, 219, 0.4);
+        padding: 6px 14px;
+        font-size: 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 10px auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+      }
+
+      .editor-toggle-btn:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .editor-panel {
+        display: none;
+        background: rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 14px;
+        margin: 10px 0 16px;
+        text-align: left;
+      }
+
+      .editor-panel.open {
+        display: block;
+      }
+
+      .control-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: var(--text-secondary);
+      }
+
+      .control-row label {
+        min-width: 65px;
+      }
+
+      .control-row input[type="range"] {
+        flex: 1;
+        margin: 0 10px;
+        accent-color: var(--accent);
+      }
+
+      .btn-row {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .btn-tool {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #fff;
+        padding: 6px 8px;
+        border-radius: 8px;
+        font-size: 11px;
+        cursor: pointer;
+        text-align: center;
+        transition: background 0.2s;
+      }
+
+      .btn-tool:hover {
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      #fileInput {
+        display: none;
+      }
+
+      /* Bio and Contacts */
       .bio {
         color: var(--text-secondary);
-        font-size: 14px;
-        margin-bottom: 25px;
+        font-size: 13.5px;
         line-height: 1.5;
+        margin: 14px 0 20px;
       }
 
       .contact-links {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        width: 100%;
+        gap: 10px;
       }
 
       .contact-btn {
         text-decoration: none;
         color: var(--text-primary);
-        font-size: 14px;
-        padding: 12px;
+        font-size: 13px;
+        padding: 10px;
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.06);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: background 0.2s ease;
+        transition: all 0.2s ease;
       }
 
       .contact-btn:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(52, 152, 219, 0.25);
+        border-color: var(--accent);
       }
     </style>
   </head>
   <body>
-    <!-- The structure is clean: Top Info -> Rounded Avatar -> Bio -> Buttons -->
-    <div class="portfolio-card" id="profileCard">
+    <div class="portfolio-card">
       <div class="top-section">
         <h1 class="member-name" id="name">MEMBER NAME</h1>
         <p class="member-role" id="role">ROLE / DEPARTMENT</p>
       </div>
 
-      <!-- New visible rounded image area that replaces the QR code -->
-      <div class="avatar-container">
-        <img src="" alt="Member Photo" class="member-avatar" id="avatarImg" />
+      <!-- Avatar with Frame -->
+      <div class="avatar-wrapper">
+        <div class="avatar-frame" id="avatarFrame" title="Click and drag to position image">
+          <img src="" alt="Profile Avatar" id="avatarImg" />
+        </div>
+      </div>
+      <p class="drag-hint">Drag photo inside circle to position</p>
+
+      <!-- Toggle Editor Panel Button -->
+      <button class="editor-toggle-btn" id="toggleEditorBtn">
+        <span>⚙</span> Adjust & Align Photo
+      </button>
+
+      <!-- Interactive Controls Drawer -->
+      <div class="editor-panel" id="editorPanel">
+        <div class="control-row">
+          <label for="zoomRange">Zoom</label>
+          <input type="range" id="zoomRange" min="1" max="3" step="0.05" value="1" />
+          <span id="zoomVal">1.0x</span>
+        </div>
+
+        <div class="control-row">
+          <label for="rotateRange">Rotate</label>
+          <input type="range" id="rotateRange" min="-180" max="180" step="5" value="0" />
+          <span id="rotateVal">0°</span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn-tool" id="zoomInBtn">+ Zoom In</button>
+          <button class="btn-tool" id="zoomOutBtn">- Zoom Out</button>
+          <button class="btn-tool" id="resetBtn">Reset</button>
+        </div>
+
+        <div class="btn-row" style="margin-top: 8px;">
+          <label class="btn-tool" style="cursor:pointer;" for="fileInput">📁 Upload New Image</label>
+          <input type="file" id="fileInput" accept="image/*" />
+        </div>
       </div>
 
-      <div class="bottom-section">
-        <p class="bio" id="bio">ExeCom Member 2026 | Department Name</p>
+      <!-- Bio & Links -->
+      <p class="bio" id="bio"></p>
 
-        <div class="contact-links">
-          <a href="#" class="contact-btn" id="linkedin" target="_blank">LinkedIn</a>
-          <a href="#" class="contact-btn" id="github" target="_blank">GitHub</a>
-          <a href="#" class="contact-btn" id="whatsapp" target="_blank">WhatsApp</a>
-          <a href="#" class="contact-btn" id="email" target="_blank">Email</a>
-        </div>
+      <div class="contact-links">
+        <a href="#" class="contact-btn" id="linkedin" target="_blank">LinkedIn</a>
+        <a href="#" class="contact-btn" id="github" target="_blank">GitHub</a>
+        <a href="#" class="contact-btn" id="whatsapp" target="_blank">WhatsApp</a>
+        <a href="#" class="contact-btn" id="email" target="_blank">Email</a>
       </div>
     </div>
 
-    <!-- Original script logic retained to pull from members.js -->
     <script src="members.js"></script>
     <script>
-      function loadProfile() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const memberId = urlParams.get("id");
+      // Load Profile Data from members.js
+      const urlParams = new URLSearchParams(window.location.search);
+      const memberId = urlParams.get("id");
+      const data = (typeof members !== "undefined" && members[memberId]) ? members[memberId] : (typeof members !== "undefined" ? members["01"] : null);
 
-        // Use standard ID like '01', fallback to first member
-        const data = members[memberId] || members["01"];
+      const avatarImg = document.getElementById("avatarImg");
 
-        if (data) {
-          document.getElementById("name").textContent = data.name;
-          document.getElementById("role").textContent =
-            data.role + " | " + data.department;
-          document.getElementById("bio").textContent = data.bio;
-          document.getElementById("avatarImg").src = data.avatar;
+      if (data) {
+        document.getElementById("name").textContent = data.name;
+        document.getElementById("role").textContent = data.role + " | " + data.department;
+        document.getElementById("bio").textContent = data.bio;
+        avatarImg.src = data.avatar;
 
-          // Social Links (only set if they exist in members.js)
-          if (data.linkedin) document.getElementById("linkedin").href = data.linkedin;
-          if (data.github) document.getElementById("github").href = data.github;
-          if (data.whatsapp) document.getElementById("whatsapp").href = data.whatsapp;
-          if (data.email) document.getElementById("email").href = data.email;
-        }
+        if (data.linkedin) document.getElementById("linkedin").href = data.linkedin;
+        if (data.github) document.getElementById("github").href = data.github;
+        if (data.whatsapp) document.getElementById("whatsapp").href = data.whatsapp;
+        if (data.email) document.getElementById("email").href = data.email;
       }
 
-      // Run on page load
-      loadProfile();
+      // Transform state
+      let scale = 1;
+      let posX = 0;
+      let posY = 0;
+      let rotation = 0;
+
+      function updateTransform() {
+        avatarImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale}) rotate(${rotation}deg)`;
+      }
+
+      // Toggle Editor Drawer
+      const toggleBtn = document.getElementById("toggleEditorBtn");
+      const panel = document.getElementById("editorPanel");
+      toggleBtn.addEventListener("click", () => {
+        panel.classList.toggle("open");
+        toggleBtn.textContent = panel.classList.contains("open") ? "▲ Close Controls" : "⚙ Adjust & Align Photo";
+      });
+
+      // Zoom Sliders & Buttons
+      const zoomRange = document.getElementById("zoomRange");
+      const zoomVal = document.getElementById("zoomVal");
+      zoomRange.addEventListener("input", (e) => {
+        scale = parseFloat(e.target.value);
+        zoomVal.textContent = scale.toFixed(1) + "x";
+        updateTransform();
+      });
+
+      document.getElementById("zoomInBtn").addEventListener("click", () => {
+        scale = Math.min(scale + 0.15, 3);
+        zoomRange.value = scale;
+        zoomVal.textContent = scale.toFixed(1) + "x";
+        updateTransform();
+      });
+
+      document.getElementById("zoomOutBtn").addEventListener("click", () => {
+        scale = Math.max(scale - 0.15, 1);
+        zoomRange.value = scale;
+        zoomVal.textContent = scale.toFixed(1) + "x";
+        updateTransform();
+      });
+
+      // Rotation Slider
+      const rotateRange = document.getElementById("rotateRange");
+      const rotateVal = document.getElementById("rotateVal");
+      rotateRange.addEventListener("input", (e) => {
+        rotation = parseInt(e.target.value);
+        rotateVal.textContent = rotation + "°";
+        updateTransform();
+      });
+
+      // Reset
+      document.getElementById("resetBtn").addEventListener("click", () => {
+        scale = 1;
+        posX = 0;
+        posY = 0;
+        rotation = 0;
+        zoomRange.value = 1;
+        zoomVal.textContent = "1.0x";
+        rotateRange.value = 0;
+        rotateVal.textContent = "0°";
+        updateTransform();
+      });
+
+      // Drag to Position (Mouse & Touch)
+      const frame = document.getElementById("avatarFrame");
+      let isDragging = false;
+      let startX, startY;
+
+      const onStart = (e) => {
+        isDragging = true;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        startX = clientX - posX;
+        startY = clientY - posY;
+      };
+
+      const onMove = (e) => {
+        if (!isDragging) return;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        posX = clientX - startX;
+        posY = clientY - startY;
+        updateTransform();
+      };
+
+      const onEnd = () => { isDragging = false; };
+
+      frame.addEventListener("mousedown", onStart);
+      window.addEventListener("mousemove", onMove);
+      window.addEventListener("mouseup", onEnd);
+
+      frame.addEventListener("touchstart", onStart, { passive: true });
+      window.addEventListener("touchmove", onMove, { passive: true });
+      window.addEventListener("touchend", onEnd);
+
+      // Local File Upload
+      document.getElementById("fileInput").addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            avatarImg.src = event.target.result;
+            // Reset position for new image
+            scale = 1;
+            posX = 0;
+            posY = 0;
+            rotation = 0;
+            zoomRange.value = 1;
+            zoomVal.textContent = "1.0x";
+            rotateRange.value = 0;
+            rotateVal.textContent = "0°";
+            updateTransform();
+          };
+          reader.readAsDataURL(file);
+        }
+      });
     </script>
   </body>
 </html>
