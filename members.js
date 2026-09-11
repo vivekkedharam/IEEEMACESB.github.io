@@ -4,7 +4,7 @@ const members = {
     role: "WEBMASTER",
     department: "Executive",
     bio: "IEEE MACE SB ExeCom'26",
-    avatar: "Alone.jpg",
+    avatar: "VIVEK VIJAYAN.jpeg",
     linkedin: "https://www.linkedin.com/in/vivek-vijayan-6a7aa6281",
     github: "https://github.com",
     whatsapp: "https://wa.me/917592840401",
