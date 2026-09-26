@@ -11,12 +11,12 @@ const members = {
     email: "mailto:vivekkedharam@gmail.com"
   },
   "02": {
-    name: "Member 02",
-    role: "Chairperson",
+    name: "Abhija C",
+    role: "Membership development coordinator",
     department: "Executive",
-    bio: "Student Branch Chair overseeing operations, planning, and leadership.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=2",
-    linkedin: "https://linkedin.com",
+    bio: "IEEE MACE SB Execom'26",
+    avatar: "Abhija (2).jpg",
+    linkedin: "https://www.linkedin.com/in/abhija-c-b3614838a/",
     github: "https://github.com",
     whatsapp: "https://wa.me/919999999999",
     email: "mailto:member02@example.com"
