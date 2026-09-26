@@ -233,7 +233,7 @@
     const sb = window.supabase ? window.supabase.createClient(SB_URL, SB_KEY) : null;
       const urlParams = new URLSearchParams(window.location.search);
       const memberId = urlParams.get("id") || "01";
-      const isAdmin = urlParams.get("admin") === "true";
+      const isAdmin = urlParams.get("admin") === "webmasteradmincontrolTXadmin";
       const data = (typeof members !== "undefined" && members[memberId]) ? members[memberId] : (typeof members !== "undefined" ? members["01"] : null);
 
       const avatarImg = document.getElementById("avatarImg");
