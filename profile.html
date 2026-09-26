@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Member Portfolio | IEEE MACE SB</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
       :root {
         --bg-color: #010101;
@@ -227,6 +228,9 @@
 
     <script src="members.js"></script>
     <script>
+      const SB_URL = "https://gatpsfeadqoaadxtoxfp.supabase.co";
+    const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhdHBzZmVhZHFvYWFkeHRveGZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA0Mzc2NjMsImV4cCI6MjEwNjAxMzY2M30.Pl7mAabyNHBxxAo0cCRAFEkf5B5-dZ-juRto1905uVc";
+    const sb = window.supabase ? window.supabase.createClient(SB_URL, SB_KEY) : null;
       const urlParams = new URLSearchParams(window.location.search);
       const memberId = urlParams.get("id") || "01";
       const isAdmin = urlParams.get("admin") === "true";
@@ -240,14 +244,25 @@
       let posY = (data && data.posY !== undefined) ? data.posY : 0;
       let scale = (data && data.zoom !== undefined) ? data.zoom : 1;
 
-      // Check saved alignment from browser storage
-      const localSaved = localStorage.getItem("member_align_" + memberId);
-      if (localSaved) {
-        try {
-          const parsed = JSON.parse(localSaved);
-          posX = parsed.posX;
-          posY = parsed.posY;
-          scale = parsed.scale;
+      // Load saved alignment from Supabase cloud
+    if (sb) {
+      sb.from('alignments')
+        .select('*')
+        .eq('id', memberId)
+        .single()
+        .then(({ data }) => {
+          if (data) {
+            scale = data.zoom;
+            posX = data.pos_x;
+            posY = data.pos_y;
+            applyTransform();
+            const zR = document.getElementById("zoomRange");
+            const zV = document.getElementById("zoomVal");
+            if (zR) zR.value = scale;
+            if (zV) zV.textContent = scale.toFixed(1) + "x";
+          }
+        });
+    }
         } catch (e) {}
       }
 
@@ -311,15 +326,27 @@
         window.addEventListener("touchmove", onMove, { passive: true });
         window.addEventListener("touchend", onEnd);
 
-        // Save position permanently on device
-        document.getElementById("saveBtn").addEventListener("click", () => {
-          localStorage.setItem(
-            "member_align_" + memberId,
-            JSON.stringify({ posX, posY, scale })
-          );
-          statusMsg.textContent = "✓ Alignment saved! Stays active across refreshes.";
-          setTimeout(() => { statusMsg.textContent = ""; }, 3000);
+       // Save position permanently to Supabase cloud
+      document.getElementById("saveBtn").addEventListener("click", async () => {
+        if (!sb) {
+          statusMsg.textContent = "Database connection missing.";
+          return;
+        }
+        statusMsg.textContent = "Saving to cloud...";
+        const { error } = await sb.from('alignments').upsert({
+          id: memberId,
+          zoom: scale,
+          pos_x: posX,
+          pos_y: posY
         });
+
+        if (!error) {
+          statusMsg.textContent = "✓ Saved globally! Visible on all devices.";
+        } else {
+          statusMsg.textContent = "Save failed: " + error.message;
+        }
+        setTimeout(() => { statusMsg.textContent = ""; }, 4000);
+      }); 
       }
     </script>
   </body>
