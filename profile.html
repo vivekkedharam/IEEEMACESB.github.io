@@ -210,8 +210,19 @@
           <span id="zoomVal">1.0x</span>
         </div>
         <p style="font-size: 11px; color: var(--text-secondary); margin-bottom: 8px;">
-          👉 Drag the photo directly inside the circle to position it.
-        </p>
+          👉 Drag the photo directly inside the circle to position it.</p>
+          <!-- Role & Text Color Controls -->
+        <div style="margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 8px;">
+          <label style="display:block; font-size: 11px; color: var(--text-secondary); margin-bottom: 4px;">Role / Designation:</label>
+          <input type="text" id="roleInput" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: #fff; font-size: 12px; margin-bottom: 8px; box-sizing: border-box;" />
+
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-secondary);">
+            <span>Role Color:</span>
+            <input type="color" id="roleColorPicker" value="#3498db" style="border: none; width: 32px; height: 24px; cursor: pointer; background: transparent;" />
+            <span style="margin-left: 10px;">Name Color:</span>
+            <input type="color" id="nameColorPicker" value="#ffffff" style="border: none; width: 32px; height: 24px; cursor: pointer; background: transparent;" />
+          </div>
+        </div>
         <button class="btn-save" id="saveBtn">Save Alignment</button>
         <div class="status-text" id="statusMsg"></div>
       </div>
@@ -260,6 +271,11 @@
             const zV = document.getElementById("zoomVal");
             if (zR) zR.value = scale;
             if (zV) zV.textContent = scale.toFixed(1) + "x";
+            const rEl = document.getElementById("role");
+const nEl = document.getElementById("name");
+if (data.custom_role && rEl) rEl.textContent = data.custom_role;
+if (data.role_color && rEl) rEl.style.color = data.role_color;
+if (data.name_color && nEl) nEl.style.color = data.name_color;
           }
         });
     }
@@ -287,6 +303,22 @@
       if (isAdmin) {
         document.getElementById("adminPanel").style.display = "block";
         frame.classList.add("admin-mode");
+        const rEl = document.getElementById("role");
+    const nEl = document.getElementById("name");
+    const rInput = document.getElementById("roleInput");
+    const rColor = document.getElementById("roleColorPicker");
+    const nColor = document.getElementById("nameColorPicker");
+
+    if (rInput && rEl) {
+      rInput.value = rEl.textContent;
+      rInput.addEventListener("input", (e) => { rEl.textContent = e.target.value; });
+    }
+    if (rColor && rEl) {
+      rColor.addEventListener("input", (e) => { rEl.style.color = e.target.value; });
+    }
+    if (nColor && nEl) {
+      nColor.addEventListener("input", (e) => { nEl.style.color = e.target.value; });
+    }
 
         const zoomRange = document.getElementById("zoomRange");
         const zoomVal = document.getElementById("zoomVal");
@@ -337,7 +369,10 @@
           id: memberId,
           zoom: scale,
           pos_x: posX,
-          pos_y: posY
+          pos_y: posY,
+          custom_role: rInput ? rInput.value : undefined,
+          role_color: rColor ? rColor.value : undefined,
+          name_color: nColor ? nColor.value : undefined
         });
 
         if (!error) {
