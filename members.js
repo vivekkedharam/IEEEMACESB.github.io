@@ -58,7 +58,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Sooryanath%20S",
+    "avatar": "sooryan.jpeg",
 
     "linkedin": "",
 
@@ -84,7 +84,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Devi%20R%20S",
+    "avatar": "devi.jpeg",
 
     "linkedin": "https://linkedin.com/in/devirs8891",
 
@@ -110,7 +110,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Reji%20RS",
+    "avatar": "reji.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/reji-r-s-571b70312",
 
@@ -136,7 +136,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. ",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Khan%20Zara%20Mohd%20Rashid",
+    "avatar": "khan.jpeg",
 
     "linkedin": "",
 
@@ -162,7 +162,7 @@ const members = {
 
     "bio": "IEEE MACE SB member.",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Busthana%20Thasneem",
+    "avatar": "bus.jpeg",
 
     "linkedin": "",
 
@@ -188,7 +188,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. ",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Hanna%20A",
+    "avatar": "hanna.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/hanna-a-76260a2a1",
 
@@ -214,7 +214,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. ",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Sumayya%20Sulfi",
+    "avatar": "sumaya.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/sumayya-sulfi-6b5987321",
 
@@ -240,7 +240,7 @@ const members = {
 
     "bio": "IEEE MACE SB member.",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Adil%20Muhammed%20R%20S",
+    "avatar": "adil.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/adilmuhammedrs",
 
@@ -266,7 +266,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Ajmila%20Farhath%20S",
+    "avatar": "ajmila.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/ajmila-farhath-s-9543b3370",
 
@@ -292,7 +292,7 @@ const members = {
 
     "bio": "IEEE MACE SB member..",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Muhammad%20Banna%20FN",
+    "avatar": "banna.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/muhammadbannafn",
 
@@ -318,7 +318,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Abhinav%20A%20A",
+    "avatar": "abhinav.jpeg",
 
     "linkedin": "",
 
@@ -344,7 +344,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Khaiz%20Mohammed%20DK",
+    "avatar": "khaiz.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/khaiz-mohammed-dk-864a1540b",
 
@@ -370,7 +370,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Flamey%20Sumal",
+    "avatar": "flamey.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/flamey-sumal-6618a4387",
 
@@ -396,7 +396,7 @@ const members = {
 
     "bio": "IEEE MACE SB MEMBER.",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Rizwana%20A",
+    "avatar": "rizwana.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/rizwana-a-009826392",
 
@@ -422,7 +422,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. ",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Muhsina%20Yoonus",
+    "avatar": "muhsina.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/muhsina-yoonus-97155036b",
 
@@ -448,7 +448,7 @@ const members = {
 
     "bio": "IEEE MACE SB member..",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Mishal%20Nysam%20K",
+    "avatar": "mishal.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/mishal-nysam-1829033b0",
 
@@ -474,7 +474,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Aslam%20S",
+    "avatar": "aslam.jpeg",
 
     "linkedin": "",
 
@@ -500,7 +500,7 @@ const members = {
 
     "bio": "IEEE MACE SB member.",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Mila%20Fathiha%20KR",
+    "avatar": "mila.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/mila-fathiha-2959b9378",
 
@@ -526,7 +526,7 @@ const members = {
 
     "bio": "IEEE MACE SB member. .",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Aasima%20Noureen%20Sherief",
+    "avatar": "asima.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/aasima-noureen-sherief-3816bb21b",
 
@@ -552,7 +552,7 @@ const members = {
 
     "bio": "IEEE MACE SB 26 EXECOM.",
 
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2022",
+    "avatar": "krish.jpeg",
 
     "linkedin": "https://www.linkedin.com/in/krishnakumar-r-ab705729a/?isSelfProfile=true",
 
