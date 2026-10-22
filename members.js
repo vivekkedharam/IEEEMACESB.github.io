@@ -30,7 +30,7 @@ const members = {
 
     "department": "IEEE MACE SB",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Membership Development Coordinator (MDC).",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "Abhija (2).jpg",
 
@@ -56,7 +56,7 @@ const members = {
 
     "department": "Finance",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Treasurer.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Sooryanath%20S",
 
@@ -82,7 +82,7 @@ const members = {
 
     "department": "Events",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Event Coordinator.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Devi%20R%20S",
 
@@ -108,7 +108,7 @@ const members = {
 
     "department": "Events",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Event Coordinator.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Reji%20RS",
 
@@ -134,7 +134,7 @@ const members = {
 
     "department": "Executive",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: SB Secretary.",
+    "bio": "IEEE MACE SB member. ",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Khan%20Zara%20Mohd%20Rashid",
 
@@ -160,7 +160,7 @@ const members = {
 
     "department": "SPS / Executive",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: SPS Chairperson; SB Vice Chairperson.",
+    "bio": "IEEE MACE SB member.",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Busthana%20Thasneem",
 
@@ -186,7 +186,7 @@ const members = {
 
     "department": "Executive",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Vice Chairman.",
+    "bio": "IEEE MACE SB member. ",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Hanna%20A",
 
@@ -212,7 +212,7 @@ const members = {
 
     "department": "Creative & Media",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Design Team.",
+    "bio": "IEEE MACE SB member. ",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Sumayya%20Sulfi",
 
@@ -238,7 +238,7 @@ const members = {
 
     "department": "Executive",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: ECC.",
+    "bio": "IEEE MACE SB member.",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Adil%20Muhammed%20R%20S",
 
@@ -264,7 +264,7 @@ const members = {
 
     "department": "Media & Content",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Content Writer.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Ajmila%20Farhath%20S",
 
@@ -290,7 +290,7 @@ const members = {
 
     "department": "Events",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Event Coordinator Lead.",
+    "bio": "IEEE MACE SB member..",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Muhammad%20Banna%20FN",
 
@@ -316,7 +316,7 @@ const members = {
 
     "department": "Technical",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Technical Coordinator.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Abhinav%20A%20A",
 
@@ -342,7 +342,7 @@ const members = {
 
     "department": "Sensors Council / Membership",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Chair, Sensors Council & MDC.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Khaiz%20Mohammed%20DK",
 
@@ -368,7 +368,7 @@ const members = {
 
     "department": "Sensors Council / Membership",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Secretary, Sensors Council; MDC.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Flamey%20Sumal",
 
@@ -394,7 +394,7 @@ const members = {
 
     "department": "Media",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Media Team.",
+    "bio": "IEEE MACE SB MEMBER.",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Rizwana%20A",
 
@@ -420,7 +420,7 @@ const members = {
 
     "department": "Creative & Media",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Design Team.",
+    "bio": "IEEE MACE SB member. ",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Muhsina%20Yoonus",
 
@@ -446,7 +446,7 @@ const members = {
 
     "department": "Media",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Media Team.",
+    "bio": "IEEE MACE SB member..",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Mishal%20Nysam%20K",
 
@@ -472,7 +472,7 @@ const members = {
 
     "department": "Media",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Video Editor.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Aslam%20S",
 
@@ -498,7 +498,7 @@ const members = {
 
     "department": "Creative & Media",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Design Team.",
+    "bio": "IEEE MACE SB member.",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Mila%20Fathiha%20KR",
 
@@ -524,7 +524,7 @@ const members = {
 
     "department": "SPS",
 
-    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: SPS Secretary.",
+    "bio": "IEEE MACE SB member. .",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Aasima%20Noureen%20Sherief",
 
@@ -544,25 +544,25 @@ const members = {
 
   "22": {
 
-    "name": "Member 22 — details needed",
+    "name": "Krishnakumar R",
 
-    "role": "Not provided in PDF",
+    "role": "Technical Coordinator",
 
-    "department": "Not provided",
+    "department": "Technical",
 
-    "bio": "No matching member details were present in the supplied PDF.",
+    "bio": "IEEE MACE SB 26 EXECOM.",
 
     "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2022",
 
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/krishnakumar-r-ab705729a/?isSelfProfile=true",
 
-    "github": "",
+    "github": "https://github.com/KK2005krish",
 
-    "whatsapp": "",
+    "whatsapp": "https://wa.me/917356850856",
 
-    "email": "",
+    "email": "kk2610858@gmail.com",
 
-    "instagram": "",
+    "instagram": "https://www.instagram.com/astro____philian____/",
 
     "photo_drive_link": ""
 
