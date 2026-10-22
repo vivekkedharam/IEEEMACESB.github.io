@@ -1,288 +1,675 @@
 const members = {
+
   "01": {
-    name: "VIVEK VIJAYAN",
-    role: "WEBMASTER",
-    department: "Executive",
-    bio: "IEEE MACE SB ExeCom'26",
-    avatar: "VIVEK VIJAYAN.jpeg",
-    linkedin: "https://www.linkedin.com/in/vivek-vijayan-6a7aa6281",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/917592840401",
-    email: "mailto:vivekkedharam@gmail.com"
+
+    "name": "VIVEK VIJAYAN",
+
+    "role": "WEBMASTER",
+
+    "department": "Executive",
+
+    "bio": "IEEE MACE SB ExeCom'26",
+
+    "avatar": "VIVEK VIJAYAN.jpeg",
+
+    "linkedin": "https://www.linkedin.com/in/vivek-vijayan-6a7aa6281",
+
+    "github": "https://github.com/vivekkedharam",
+
+    "whatsapp": "https://wa.me/917592840401",
+
+    "email": "mailto:vivekkedharam@gmail.com"
+
   },
+
   "02": {
-    name: "Abhija C",
-    role: "Membership development coordinator",
-    department: "Executive",
-    bio: "IEEE MACE SB Execom'26",
-    avatar: "Abhija (2).jpg",
-    linkedin: "https://www.linkedin.com/in/abhija-c-b3614838a/",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member02@example.com"
+
+    "name": "Abhija C",
+
+    "role": "Membership Development Coordinator (MDC)",
+
+    "department": "IEEE MACE SB",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Membership Development Coordinator (MDC).",
+
+    "avatar": "Abhija (2).jpg",
+
+    "linkedin": "https://www.linkedin.com/in/abhija-c-b3614838a/",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/917736062344",
+
+    "email": "",
+
+    "instagram": "abhi_ja___",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1v7u_F4o0x8wMQU"
+
   },
+
   "03": {
-    name: "krishna kumar",
-    role: "Vice Chair",
-    department: "Executive",
-    bio: "Assisting branch leadership, overseeing committee initiatives and programs.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=3",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member03@example.com"
+
+    "name": "Sooryanath S",
+
+    "role": "Treasurer",
+
+    "department": "Finance",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Treasurer.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Sooryanath%20S",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/916238414781",
+
+    "email": "",
+
+    "instagram": "master_music_86",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1lNGskSaj_1uBeyOy"
+
   },
+
   "04": {
-    name: "Member 04",
-    role: "Secretary",
-    department: "Executive",
-    bio: "Documentation, reporting, meeting minutes, and official correspondence.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=4",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member04@example.com"
+
+    "name": "Devi R S",
+
+    "role": "Event Coordinator",
+
+    "department": "Events",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Event Coordinator.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Devi%20R%20S",
+
+    "linkedin": "https://linkedin.com/in/devirs8891",
+
+    "github": "https://github.com/PyDevi",
+
+    "whatsapp": "https://wa.me/918891416246",
+
+    "email": "",
+
+    "instagram": "__devihh",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1CR2Nt_zl1q4guAlyi"
+
   },
+
   "05": {
-    name: "Member 05",
-    role: "Treasurer",
-    department: "Finance",
-    bio: "Managing branch accounts, budgeting, sponsorships, and event finances.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=5",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member05@example.com"
+
+    "name": "Reji RS",
+
+    "role": "Event Coordinator",
+
+    "department": "Events",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Event Coordinator.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Reji%20RS",
+
+    "linkedin": "https://www.linkedin.com/in/reji-r-s-571b70312",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/919567145363",
+
+    "email": "",
+
+    "instagram": "_re_ji._",
+
+    "photo_drive_link": "https://drive.google.com/open?id=17nr4TvQ4-DlfTcJNq"
+
   },
+
   "06": {
-    name: "Member 06",
-    role: "Joint Secretary",
-    department: "Executive",
-    bio: "Assisting operations, internal communications, and branch reporting.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=6",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member06@example.com"
+
+    "name": "Khan Zara Mohd Rashid",
+
+    "role": "SB Secretary",
+
+    "department": "Executive",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: SB Secretary.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Khan%20Zara%20Mohd%20Rashid",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/918292753902",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1mbJ6AhNYPjBQYb"
+
   },
+
   "07": {
-    name: "Member 07",
-    role: "Technical Coordinator",
-    department: "Technical",
-    bio: "Overseeing technical initiatives, hackathons, and lab projects.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=7",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member07@example.com"
+
+    "name": "Busthana Thasneem",
+
+    "role": "SPS Chairperson; SB Vice Chairperson",
+
+    "department": "SPS / Executive",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: SPS Chairperson; SB Vice Chairperson.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Busthana%20Thasneem",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/919447309991",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1PZLFPBCFqGhmi3O"
+
   },
+
   "08": {
-    name: "Member 08",
-    role: "Design Lead",
-    department: "Creative & Media",
-    bio: "Leading creative visual identity, posters, and design systems.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=8",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member08@example.com"
+
+    "name": "Hanna A",
+
+    "role": "Vice Chairman",
+
+    "department": "Executive",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Vice Chairman.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Hanna%20A",
+
+    "linkedin": "https://www.linkedin.com/in/hanna-a-76260a2a1",
+
+    "github": "https://github.com/haleemhanna290",
+
+    "whatsapp": "https://wa.me/919048264843",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": "https://drive.google.com/open?id=13TML8aassx-g1-HZ"
+
   },
+
   "09": {
-    name: "Member 09",
-    role: "Publicity Lead",
-    department: "Public Relations",
-    bio: "Handling branch publicity, campaign outreach, and social engagement.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=9",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member09@example.com"
+
+    "name": "Sumayya Sulfi",
+
+    "role": "Design Team",
+
+    "department": "Creative & Media",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Design Team.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Sumayya%20Sulfi",
+
+    "linkedin": "https://www.linkedin.com/in/sumayya-sulfi-6b5987321",
+
+    "github": "https://github.com/sumayyasulfi51-ux",
+
+    "whatsapp": "https://wa.me/919778536924",
+
+    "email": "",
+
+    "instagram": "Sumayya_s_u_l_f_i_",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1ZTVEN-_f6zaOb30a"
+
   },
+
   "10": {
-    name: "Member 10",
-    role: "Membership Development Chair",
-    department: "Membership",
-    bio: "Driving member retention, growth, and IEEE benefit onboarding.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=10",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member10@example.com"
+
+    "name": "Adil Muhammed R S",
+
+    "role": "ECC",
+
+    "department": "Executive",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: ECC.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Adil%20Muhammed%20R%20S",
+
+    "linkedin": "https://www.linkedin.com/in/adilmuhammedrs",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/918590170935",
+
+    "email": "",
+
+    "instagram": "adil.muhammedrs",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1g7gtukwgs1MQJ9b"
+
   },
+
   "11": {
-    name: "Member 11",
-    role: "WIE Chair",
-    department: "Women in Engineering",
-    bio: "Empowering women in STEM through workshops and mentorship programs.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=11",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member11@example.com"
+
+    "name": "Ajmila Farhath S",
+
+    "role": "Content Writer",
+
+    "department": "Media & Content",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Content Writer.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Ajmila%20Farhath%20S",
+
+    "linkedin": "https://www.linkedin.com/in/ajmila-farhath-s-9543b3370",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/918089339830",
+
+    "email": "",
+
+    "instagram": "ajm__la",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1cxgsz0Ty8pMNzSx"
+
   },
+
   "12": {
-    name: "Member 12",
-    role: "WIE Secretary",
-    department: "Women in Engineering",
-    bio: "Coordinating affinity group meetings, initiatives, and event records.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=12",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member12@example.com"
+
+    "name": "Muhammad Banna FN",
+
+    "role": "Event Coordinator Lead",
+
+    "department": "Events",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Event Coordinator Lead.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Muhammad%20Banna%20FN",
+
+    "linkedin": "https://www.linkedin.com/in/muhammadbannafn",
+
+    "github": "https://github.com/SirLooseNuts",
+
+    "whatsapp": "https://wa.me/919074390973",
+
+    "email": "",
+
+    "instagram": "sirloosenuts",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1AWK5xblaN21BimK"
+
   },
+
   "13": {
-    name: "Member 13",
-    role: "Computer Society Chair",
-    department: "IEEE CS Chapter",
-    bio: "Guiding software development, coding competitions, and tech talks.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=13",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member13@example.com"
+
+    "name": "Abhinav A A",
+
+    "role": "Technical Coordinator",
+
+    "department": "Technical",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Technical Coordinator.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Abhinav%20A%20A",
+
+    "linkedin": "",
+
+    "github": "https://github.com/",
+
+    "whatsapp": "https://wa.me/919446580202",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": "https://drive.google.com/open?id=10KedhfcZio07o2hW"
+
   },
+
   "14": {
-    name: "Member 14",
-    role: "Computer Society Secretary",
-    department: "IEEE CS Chapter",
-    bio: "Managing activities, membership engagement, and technical tracks.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=14",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member14@example.com"
+
+    "name": "Khaiz Mohammed DK",
+
+    "role": "Chair, Sensors Council & MDC",
+
+    "department": "Sensors Council / Membership",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Chair, Sensors Council & MDC.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Khaiz%20Mohammed%20DK",
+
+    "linkedin": "https://www.linkedin.com/in/khaiz-mohammed-dk-864a1540b",
+
+    "github": "https://github.com/khaizmohammed62340-hub",
+
+    "whatsapp": "https://wa.me/918590580297",
+
+    "email": "",
+
+    "instagram": "khaiz.eey",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1JX3vxeL7xJyt3Rye"
+
   },
+
   "15": {
-    name: "Member 15",
-    role: "PES Chair",
-    department: "Power & Energy Society",
-    bio: "Advancing green energy, sustainable technology, and power systems.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=15",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member15@example.com"
+
+    "name": "Flamey Sumal",
+
+    "role": "Secretary, Sensors Council; MDC",
+
+    "department": "Sensors Council / Membership",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Secretary, Sensors Council; MDC.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Flamey%20Sumal",
+
+    "linkedin": "https://www.linkedin.com/in/flamey-sumal-6618a4387",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/918075008081",
+
+    "email": "",
+
+    "instagram": "flamey_sumal",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1mUmPBu575LrSQE"
+
   },
+
   "16": {
-    name: "Member 16",
-    role: "PES Secretary",
-    department: "Power & Energy Society",
-    bio: "Handling PES events, student engagement, and technical documentation.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=16",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member16@example.com"
+
+    "name": "Rizwana A",
+
+    "role": "Media Team",
+
+    "department": "Media",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Media Team.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Rizwana%20A",
+
+    "linkedin": "https://www.linkedin.com/in/rizwana-a-009826392",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/918714020496",
+
+    "email": "",
+
+    "instagram": "_jst._.4_rizz_",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1_JmDffv-BVm4HWz"
+
   },
+
   "17": {
-    name: "Member 17",
-    role: "RAS Chair",
-    department: "Robotics & Automation",
-    bio: "Organizing robotics build sessions, automation labs, and challenges.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=17",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member17@example.com"
+
+    "name": "Muhsina Yoonus",
+
+    "role": "Design Team",
+
+    "department": "Creative & Media",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Design Team.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Muhsina%20Yoonus",
+
+    "linkedin": "https://www.linkedin.com/in/muhsina-yoonus-97155036b",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/919074891998",
+
+    "email": "",
+
+    "instagram": "__mxhsina.__",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1FZinwtZUooCCd9M"
+
   },
+
   "18": {
-    name: "Member 18",
-    role: "RAS Secretary",
-    department: "Robotics & Automation",
-    bio: "Documenting robotics workshops, competitions, and project cohorts.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=18",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member18@example.com"
+
+    "name": "Mishal Nysam K",
+
+    "role": "Media Team",
+
+    "department": "Media",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Media Team.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Mishal%20Nysam%20K",
+
+    "linkedin": "https://www.linkedin.com/in/mishal-nysam-1829033b0",
+
+    "github": "https://github.com/mishalnyz",
+
+    "whatsapp": "https://wa.me/918714505825",
+
+    "email": "",
+
+    "instagram": "mishal.nyzz",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1-wAViSEYMhCoZYZ"
+
   },
+
   "19": {
-    name: "Member 19",
-    role: "IAS Chair",
-    department: "Industry Applications",
-    bio: "Connecting students with industrial visits, safety, and applied engineering.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=19",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member19@example.com"
+
+    "name": "Aslam S",
+
+    "role": "Video Editor",
+
+    "department": "Media",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Video Editor.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Aslam%20S",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/918921436354",
+
+    "email": "",
+
+    "instagram": "aslammmmm; a5l4mmstories",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1oL-UE45wSqfGxPT"
+
   },
+
   "20": {
-    name: "Member 20",
-    role: "IAS Secretary",
-    department: "Industry Applications",
-    bio: "Coordinating industry interaction sessions and chapter reporting.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=20",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member20@example.com"
+
+    "name": "Mila Fathiha KR",
+
+    "role": "Design Team",
+
+    "department": "Creative & Media",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: Design Team.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Mila%20Fathiha%20KR",
+
+    "linkedin": "https://www.linkedin.com/in/mila-fathiha-2959b9378",
+
+    "github": "",
+
+    "whatsapp": "https://wa.me/917907985578",
+
+    "email": "",
+
+    "instagram": "mi_laaahhh",
+
+    "photo_drive_link": "https://drive.google.com/open?id=1j08W4OdkLsH9YD1"
+
   },
+
   "21": {
-    name: "Member 21",
-    role: "Content Lead",
-    department: "Editorial & Content",
-    bio: "Writing newsletters, announcements, and branch editorial coverage.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=21",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member21@example.com"
+
+    "name": "Aasima Noureen Sherief",
+
+    "role": "SPS Secretary",
+
+    "department": "SPS",
+
+    "bio": "IEEE MACE SB member. Position listed in the submitted member details form: SPS Secretary.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Aasima%20Noureen%20Sherief",
+
+    "linkedin": "https://www.linkedin.com/in/aasima-noureen-sherief-3816bb21b",
+
+    "github": "https://github.com/aasimanoureensherief",
+
+    "whatsapp": "https://wa.me/918590506021",
+
+    "email": "",
+
+    "instagram": "anoureenz_",
+
+    "photo_drive_link": ""
+
   },
+
   "22": {
-    name: "Member 22",
-    role: "Social Media Manager",
-    department: "Media & Branding",
-    bio: "Managing digital channels, feeds, engagement reels, and campaigns.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=22",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member22@example.com"
+
+    "name": "Member 22 — details needed",
+
+    "role": "Not provided in PDF",
+
+    "department": "Not provided",
+
+    "bio": "No matching member details were present in the supplied PDF.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2022",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": ""
+
   },
+
   "23": {
-    name: "Member 23",
-    role: "Events Coordinator",
-    department: "Operations",
-    bio: "Logistics, venue planning, and scheduling for flagship conferences.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=23",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member23@example.com"
+
+    "name": "Member 23 — details needed",
+
+    "role": "Not provided in PDF",
+
+    "department": "Not provided",
+
+    "bio": "No matching member details were present in the supplied PDF.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2023",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": ""
+
   },
+
   "24": {
-    name: "Member 24",
-    role: "Sponsorship & PR Coordinator",
-    department: "Corporate Relations",
-    bio: "Securing brand sponsorships and external organizational partnerships.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=24",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member24@example.com"
+
+    "name": "Member 24 — details needed",
+
+    "role": "Not provided in PDF",
+
+    "department": "Not provided",
+
+    "bio": "No matching member details were present in the supplied PDF.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2024",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": ""
+
   },
+
   "25": {
-    name: "Member 25",
-    role: "Student Activities Coordinator",
-    department: "Student Affairs",
-    bio: "Student engagement, community meetups, and volunteer drives.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=25",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member25@example.com"
+
+    "name": "Member 25 — details needed",
+
+    "role": "Not provided in PDF",
+
+    "department": "Not provided",
+
+    "bio": "No matching member details were present in the supplied PDF.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2025",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": ""
+
   },
+
   "26": {
-    name: "Member 26",
-    role: "Executive Committee Member",
-    department: "Executive",
-    bio: "Supporting student branch operations, events, and sub-committee drives.",
-    avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=26",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    whatsapp: "https://wa.me/919999999999",
-    email: "mailto:member26@example.com"
+
+    "name": "Member 26 — details needed",
+
+    "role": "Not provided in PDF",
+
+    "department": "Not provided",
+
+    "bio": "No matching member details were present in the supplied PDF.",
+
+    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2026",
+
+    "linkedin": "",
+
+    "github": "",
+
+    "whatsapp": "",
+
+    "email": "",
+
+    "instagram": "",
+
+    "photo_drive_link": ""
+
   }
+
 };
