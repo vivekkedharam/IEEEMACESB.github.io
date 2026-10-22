@@ -22,7 +22,7 @@ const members = {
     email: "mailto:member02@example.com"
   },
   "03": {
-    name: "Member 03",
+    name: "krishna kumar",
     role: "Vice Chair",
     department: "Executive",
     bio: "Assisting branch leadership, overseeing committee initiatives and programs.",
