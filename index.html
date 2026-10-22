@@ -3,229 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vivek Vijayan | Portfolio &amp; Idea Vault</title>
-  
-  <!-- FontAwesome Icons -->
+  <meta name="description" content="Meet the 26 members of IEEE MACE Student Branch and explore their individual portfolios." />
+  <title>IEEE MACE SB | Members Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- QR Code Generator Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
   <style>
     :root {
       --bg: #0d1117;
-      --card-bg: #161b22;
+      --card: rgba(22, 27, 34, .94);
       --border: #30363d;
       --accent: #58a6ff;
       --text: #c9d1d9;
       --heading: #f0f6fc;
-      --tag-bg: #21262d;
+      --muted: #8b949e;
+      --tag: #21262d;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      /* The space in the actual filename is URL-encoded as %20. */
-      background: linear-gradient(rgba(13, 17, 23, 0.65), rgba(13, 17, 23, 0.65)), url('Portfolio%20BG.jpg') no-repeat center center fixed;
-      background-size: cover;
-      background-color: var(--bg);
-      color: var(--text);
-      padding: 2rem 1rem;
       min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(rgba(13,17,23,.72), rgba(13,17,23,.86)), url('Portfolio%20BG.jpg') center / cover fixed no-repeat;
+      background-color: var(--bg); color: var(--text); padding: 28px 18px 48px;
     }
-    .container { max-width: 1100px; margin: 0 auto; }
-
-    /* Header & Profile */
-    header { text-align: center; margin-bottom: 2.5rem; }
-    .avatar { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--accent); margin-bottom: 1rem; object-fit: cover; }
-    h1 { color: var(--heading); font-size: 2rem; margin-bottom: 0.5rem; }
-    p.tagline { color: #8b949e; margin-bottom: 1.2rem; font-size: 1.05rem; }
-
-    /* Social Links */
-    .social-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-    .social-links a, .btn-qr {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--card-bg); border: 1px solid var(--border);
-      color: var(--heading); padding: 0.5rem 1rem; border-radius: 8px;
-      text-decoration: none; font-size: 0.9rem; cursor: pointer; transition: 0.2s;
-    }
-    .social-links a:hover, .btn-qr:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* Filter & Search Bar */
-    .controls { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .search-input {
-      background: var(--card-bg); border: 1px solid var(--border);
-      color: var(--heading); padding: 0.6rem 1rem; border-radius: 8px;
-      flex: 1; min-width: 250px; outline: none;
-    }
-    .search-input:focus { border-color: var(--accent); }
-    .filter-btn {
-      background: var(--tag-bg); border: 1px solid var(--border);
-      color: var(--text); padding: 0.5rem 0.9rem; border-radius: 6px; cursor: pointer;
-    }
-    .filter-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
-
-    /* Ideas Grid */
-    .ideas-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.25rem; display: flex;
-      flex-direction: column; justify-content: space-between;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
-    .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
-    .tag { font-size: 0.75rem; background: var(--tag-bg); padding: 0.2rem 0.6rem; border-radius: 12px; color: var(--accent); border: 1px solid var(--border); }
-    .card-id { font-size: 0.8rem; color: #8b949e; }
-    .card h3 { color: var(--heading); margin-bottom: 0.5rem; font-size: 1.15rem; }
-    .card p { font-size: 0.9rem; line-height: 1.4; color: #8b949e; margin-bottom: 1rem; }
-    .card-link {
-      font-size: 0.85rem; color: var(--accent); text-decoration: none;
-      display: inline-flex; align-items: center; gap: 0.3rem; margin-top: auto;
-    }
-
-    /* QR Code Modal */
-    .modal {
-      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7);
-      justify-content: center; align-items: center; z-index: 100;
-    }
-    .modal-content {
-      background: var(--card-bg); padding: 2rem; border-radius: 12px;
-      text-align: center; border: 1px solid var(--border); max-width: 320px;
-    }
-    #qrcode { display: flex; justify-content: center; margin: 1.5rem 0; }
-    .close-btn { background: var(--tag-bg); color: var(--heading); border: none; padding: 0.4rem 1rem; border-radius: 6px; cursor: pointer; }
+    a { color: inherit; }
+    .container { max-width: 1180px; margin: 0 auto; }
+    .hero { text-align: center; margin: 0 auto 32px; }
+    .avatar { width: 96px; height: 96px; object-fit: cover; border: 2px solid var(--accent); border-radius: 50%; margin-bottom: 12px; background: var(--tag); }
+    h1 { color: var(--heading); font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 7px; }
+    .tagline { color: var(--muted); margin-bottom: 18px; }
+    .social-links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .social-links a, .qr-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--heading); text-decoration: none; padding: 9px 13px; font-size: .9rem; cursor: pointer; }
+    .social-links a:hover, .qr-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .directory-head { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 18px 0 14px; }
+    .directory-head h2 { color: var(--heading); font-size: 1.45rem; }
+    #memberCount { color: var(--muted); font-weight: 400; font-size: .95rem; margin-left: 5px; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+    .search-wrap { flex: 1 1 280px; position: relative; }
+    .search-wrap i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+    #searchInput { width: 100%; background: var(--card); color: var(--heading); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px 12px 39px; outline: none; }
+    #searchInput:focus { border-color: var(--accent); }
+    #filterButtons { display: flex; flex-wrap: wrap; gap: 7px; }
+    .filter-btn { background: var(--tag); border: 1px solid var(--border); color: var(--text); padding: 9px 12px; border-radius: 7px; cursor: pointer; }
+    .filter-btn:hover, .filter-btn.active { color: #07111e; background: var(--accent); border-color: var(--accent); }
+    .members-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr)); gap: 18px; }
+    .member-card { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-radius: 13px; padding: 19px; transition: transform .18s ease, border-color .18s ease; }
+    .member-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .member-avatar { height: 84px; width: 84px; object-fit: cover; border-radius: 50%; border: 2px solid var(--border); margin-bottom: 14px; background: var(--tag); }
+    .card-top { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 11px; }
+    .tag { max-width: 80%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .72rem; color: var(--accent); background: var(--tag); border: 1px solid var(--border); border-radius: 20px; padding: 4px 8px; }
+    .member-id { color: var(--muted); font-size: .78rem; }
+    .member-card h3 { color: var(--heading); font-size: 1.06rem; line-height: 1.35; margin-bottom: 5px; overflow-wrap: anywhere; }
+    .role { color: var(--muted); font-size: .88rem; line-height: 1.4; margin-bottom: 10px; }
+    .bio { color: var(--text); opacity: .85; font-size: .87rem; line-height: 1.5; margin-bottom: 16px; }
+    .card-link { margin-top: auto; color: var(--accent); text-decoration: none; font-size: .9rem; font-weight: 600; }
+    .card-link:hover { text-decoration: underline; }
+    .empty { grid-column: 1 / -1; color: var(--muted); text-align: center; padding: 32px; background: var(--card); border-radius: 10px; }
+    footer { text-align: center; color: var(--muted); font-size: .82rem; margin-top: 34px; }
+    .modal { display: none; position: fixed; inset: 0; z-index: 20; justify-content: center; align-items: center; background: rgba(0,0,0,.78); padding: 18px; }
+    .modal-content { width: min(100%, 340px); text-align: center; background: #161b22; color: var(--text); border: 1px solid var(--border); border-radius: 13px; padding: 24px; }
+    .modal-content h3 { color: var(--heading); }
+    #qrcode { display: flex; justify-content: center; margin: 20px 0; }
+    .close-btn { background: var(--tag); color: var(--heading); border: 1px solid var(--border); border-radius: 7px; padding: 8px 17px; cursor: pointer; }
+    @media (max-width: 560px) { body { padding: 22px 12px 36px; background-attachment: scroll; } .member-card { padding: 16px; } .controls { gap: 10px; } #filterButtons { width: 100%; } }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <header>
-      <img src="VIVEK%20VIJAYAN.jpeg" alt="Vivek Vijayan profile photo" class="avatar" />
-      <h1>Vivek Vijayan</h1>
-      <p class="tagline">IEEE MACE SB Webmaster | 26 Innovative Ideas Vault</p>
-      
-      <div class="social-links">
+  <main class="container">
+    <header class="hero">
+      <img src="VIVEK%20VIJAYAN.jpeg" alt="Vivek Vijayan" class="avatar"
+           onerror="this.onerror=null;this.src='https://api.dicebear.com/7.x/initials/svg?seed=Vivek%20Vijayan'" />
+      <h1>IEEE MACE SB</h1>
+      <p class="tagline">Member Portfolios · Meet our team</p>
+      <nav class="social-links" aria-label="Social links">
         <a href="https://www.linkedin.com/in/vivek-vijayan-6a7aa6281" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
         <a href="https://github.com/vivekkedharam" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
         <a href="mailto:vivekkedharam@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
-        <button class="btn-qr" onclick="openQRModal()"><i class="fa-solid fa-qrcode"></i> Get QR Code</button>
-      </div>
+        <button class="qr-btn" type="button" id="openQR"><i class="fa-solid fa-qrcode"></i> Get QR Code</button>
+      </nav>
     </header>
 
-    <!-- Search & Filter Controls -->
-    <div class="controls">
-      <input type="text" id="searchInput" class="search-input" placeholder="Search across 26 ideas..." oninput="filterCards()" />
-      <div id="filterButtons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;"></div>
-    </div>
+    <section aria-labelledby="directoryTitle">
+      <div class="directory-head">
+        <h2 id="directoryTitle">Our Members <span id="memberCount">(loading...)</span></h2>
+      </div>
+      <div class="controls">
+        <label class="search-wrap" aria-label="Search members">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" id="searchInput" placeholder="Search by name, role, department..." autocomplete="off" />
+        </label>
+        <div id="filterButtons" aria-label="Filter members by department"></div>
+      </div>
+      <div class="members-grid" id="cardsGrid" aria-live="polite">
+        <p class="empty">Loading member portfolios...</p>
+      </div>
+    </section>
+    <footer>IEEE MACE Student Branch · Member directory</footer>
+  </main>
 
-    <!-- IEEE MACE SB Members Directory -->
-<h2>Our Members</h2>
-<div class="ideas-grid" id="cardsGrid"></div>
-
-  <!-- QR Modal -->
-  <div class="modal" id="qrModal" onclick="closeQRModal(event)">
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <h3 style="color:var(--heading);">Scan Portfolio</h3>
-      <p style="font-size:0.85rem; color:#8b949e; margin-top:0.4rem;">Share or open this portfolio on mobile</p>
+  <div class="modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+    <div class="modal-content">
+      <h3 id="qrTitle">Scan Member Directory</h3>
+      <p style="font-size:.88rem;color:var(--muted);margin-top:6px;">Scan to open this page on another device.</p>
       <div id="qrcode"></div>
-      <button class="close-btn" onclick="closeQRModal()">Close</button>
+      <button class="close-btn" type="button" id="closeQR">Close</button>
     </div>
   </div>
 
+  <!-- Load the repository's existing member data before rendering the directory. -->
+  <script src="members.js"></script>
   <script>
-    // -------------------------------------------------------------
-    // 1. ADD YOUR 24 IDEAS HERE
-    // -------------------------------------------------------------
-    
+    (() => {
+      const grid = document.getElementById('cardsGrid');
+      const searchInput = document.getElementById('searchInput');
+      const filterButtons = document.getElementById('filterButtons');
+      const count = document.getElementById('memberCount');
+      let selectedDepartment = 'All';
 
-    // Autogenerate placeholder entries up to 26 for testing.
-    for (let i = ideas.length + 1; i <= 26; i++) {
-      const pad = i < 10 ? '0' + i : i;
-      ideas.push({
-        id: pad,
-        category: i % 2 === 0 ? "Tech" : "Concept",
-        title: `Idea Project #${pad}`,
-        desc: "Add your short 1-2 sentence problem and proposed solution here.",
-        link: "#"
-      });
-    }
-
-    // -------------------------------------------------------------
-    // 2. RENDER CARDS & FILTERS
-    // -------------------------------------------------------------
-    const grid = document.getElementById("cardsGrid");
-    let activeCategory = "All";
-
-    function renderCards(list) {
-      grid.innerHTML = list.map(item => `
-        <div class="card">
-          <div>
-            <div class="card-top">
-              <span class="tag">${item.category}</span>
-              <span class="card-id">#${item.id}</span>
-            </div>
-            <h3>${item.title}</h3>
-            <p>${item.desc}</p>
-          </div>
-          <a href="profile.html?id=${item.id}" class="card-link">View Profile <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      `).join('');
-    }
-
-    function setupFilters() {
-      const categories = ["All", ...new Set(ideas.map(i => i.category))];
-      const btnContainer = document.getElementById("filterButtons");
-      btnContainer.innerHTML = categories.map(c => `
-        <button class="filter-btn ${c === 'All' ? 'active' : ''}" onclick="setCategory('${c}')">${c}</button>
-      `).join('');
-    }
-
-    function setCategory(cat) {
-      activeCategory = cat;
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.innerText === cat);
-      });
-      filterCards();
-    }
-
-    function filterCards() {
-      const query = document.getElementById("searchInput").value.toLowerCase();
-      const filtered = ideas.filter(item => {
-        const matchesCategory = activeCategory === "All" || item.category === activeCategory;
-        const matchesSearch = item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query);
-        return matchesCategory && matchesSearch;
-      });
-      renderCards(filtered);
-    }
-
-    // -------------------------------------------------------------
-    // 3. QR CODE GENERATOR MODAL
-    // -------------------------------------------------------------
-    let qrGenerated = false;
-    function openQRModal() {
-      document.getElementById('qrModal').style.display = 'flex';
-      if (!qrGenerated) {
-        new QRCode(document.getElementById("qrcode"), {
-          text: window.location.href,
-          width: 160,
-          height: 160,
-          colorDark: "#000000",
-          colorLight: "#ffffff"
-        });
-        qrGenerated = true;
+      function escapeHtml(value) {
+        return String(value ?? '').replace(/[&<>"']/g, ch => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        })[ch]);
       }
-    }
 
-    function closeQRModal() {
-      document.getElementById('qrModal').style.display = 'none';
-    }
+      function getMembers() {
+        if (typeof members === 'undefined' || !members || typeof members !== 'object') return [];
+        return Object.entries(members).map(([id, data]) => ({ id, ...data }));
+      }
 
-    // Initialize
-    setupFilters();
-    renderCards(ideas);
+      const memberList = getMembers().sort((a, b) => String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
+      count.textContent = `(${memberList.length} members)`;
+
+      function setupFilters() {
+        const departments = ['All', ...new Set(memberList.map(m => m.department || 'Member'))];
+        filterButtons.innerHTML = departments.map(department =>
+          `<button type="button" class="filter-btn${department === 'All' ? ' active' : ''}" data-department="${escapeHtml(department)}">${escapeHtml(department)}</button>`
+        ).join('');
+        filterButtons.querySelectorAll('button').forEach(button => {
+          button.addEventListener('click', () => {
+            selectedDepartment = button.dataset.department;
+            filterButtons.querySelectorAll('button').forEach(other => other.classList.toggle('active', other === button));
+            renderFiltered();
+          });
+        });
+      }
+
+      function renderCards(list) {
+        if (!list.length) {
+          grid.innerHTML = '<p class="empty">No members match your search.</p>';
+          return;
+        }
+        grid.innerHTML = list.map(member => {
+          const id = String(member.id || '');
+          const name = member.name || `Member ${id}`;
+          const role = member.role || 'IEEE MACE SB Member';
+          const department = member.department || 'Member';
+          const bio = member.bio || 'Explore this member portfolio.';
+          const rawAvatar = String(member.avatar || '');
+          const avatar = rawAvatar.startsWith('http://') || rawAvatar.startsWith('https://') ? rawAvatar : encodeURI(rawAvatar);
+          return `
+            <article class="member-card">
+              <img class="member-avatar" src="${escapeHtml(avatar)}" alt="${escapeHtml(name)}"
+                loading="lazy" onerror="this.onerror=null;this.src='https://api.dicebear.com/7.x/initials/svg?seed='+encodeURIComponent(this.alt)" />
+              <div class="card-top">
+                <span class="tag">${escapeHtml(department)}</span>
+                <span class="member-id">#${escapeHtml(id)}</span>
+              </div>
+              <h3>${escapeHtml(name)}</h3>
+              <p class="role">${escapeHtml(role)}</p>
+              <p class="bio">${escapeHtml(bio)}</p>
+              <a class="card-link" href="profile.html?id=${encodeURIComponent(id)}">View Portfolio <i class="fa-solid fa-arrow-right"></i></a>
+            </article>`;
+        }).join('');
+      }
+
+      function renderFiltered() {
+        const query = searchInput.value.trim().toLowerCase();
+        const filtered = memberList.filter(member => {
+          const department = member.department || 'Member';
+          const matchesDepartment = selectedDepartment === 'All' || department === selectedDepartment;
+          const searchable = [member.name, member.role, member.department, member.bio].join(' ').toLowerCase();
+          return matchesDepartment && searchable.includes(query);
+        });
+        renderCards(filtered);
+      }
+
+      if (!memberList.length) {
+        count.textContent = '(0 members)';
+        grid.innerHTML = '<p class="empty">Member data could not be loaded. Check that members.js exists in the repository root.</p>';
+      } else {
+        setupFilters();
+        searchInput.addEventListener('input', renderFiltered);
+        renderFiltered();
+      }
+
+      const modal = document.getElementById('qrModal');
+      document.getElementById('openQR').addEventListener('click', () => {
+        modal.style.display = 'flex';
+        const qr = document.getElementById('qrcode');
+        if (!qr.dataset.generated && typeof QRCode !== 'undefined') {
+          new QRCode(qr, { text: window.location.href, width: 170, height: 170, colorDark: '#000000', colorLight: '#ffffff' });
+          qr.dataset.generated = 'true';
+        }
+      });
+      document.getElementById('closeQR').addEventListener('click', () => { modal.style.display = 'none'; });
+      modal.addEventListener('click', event => { if (event.target === modal) modal.style.display = 'none'; });
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') modal.style.display = 'none'; });
+    })();
   </script>
 </body>
 </html>
