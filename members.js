@@ -568,105 +568,44 @@ const members = {
 
   },
 
-  "23": {
+"23": {
+  name: "Gautham H P",
+  role: "Chairman",
+  department: "Executive",
+  bio: "IEEE MACE SB Chairman.",
+  avatar: "gthm.jpeg",
+  linkedin: "https://www.linkedin.com/in/gautham-h-p-8a0752295",
+  github: "",
+  whatsapp: "https://wa.me/919947459878",
+  email: "",
+  instagram: "https://www.instagram.com/gauthamappoo/"
+},
 
-    "name": "Member 23 — details needed",
+"24": {
+  name: "Adhin M",
+  role: "Design Lead",
+  department: "Creative & Media",
+  bio: "IEEE MACE SB Design Lead.",
+  avatar: "adhn.jpeg",
+  linkedin: "https://www.linkedin.com/in/adhin-m-895715331",
+  github: "",
+  whatsapp: "https://wa.me/918921555948",
+  email: "",
+  instagram: "https://www.instagram.com/a_d_x_h_i_/"
+},
 
-    "role": "Not provided in PDF",
-
-    "department": "Not provided",
-
-    "bio": "No matching member details were present in the supplied PDF.",
-
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2023",
-
-    "linkedin": "",
-
-    "github": "",
-
-    "whatsapp": "",
-
-    "email": "",
-
-    "instagram": "",
-
-    "photo_drive_link": ""
-
-  },
-
-  "24": {
-
-    "name": "Member 24 — details needed",
-
-    "role": "Not provided in PDF",
-
-    "department": "Not provided",
-
-    "bio": "No matching member details were present in the supplied PDF.",
-
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2024",
-
-    "linkedin": "",
-
-    "github": "",
-
-    "whatsapp": "",
-
-    "email": "",
-
-    "instagram": "",
-
-    "photo_drive_link": ""
-
-  },
-
-  "25": {
-
-    "name": "Member 25 — details needed",
-
-    "role": "Not provided in PDF",
-
-    "department": "Not provided",
-
-    "bio": "No matching member details were present in the supplied PDF.",
-
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2025",
-
-    "linkedin": "",
-
-    "github": "",
-
-    "whatsapp": "",
-
-    "email": "",
-
-    "instagram": "",
-
-    "photo_drive_link": ""
-
-  },
-
-  "26": {
-
-    "name": "Member 26 — details needed",
-
-    "role": "Not provided in PDF",
-
-    "department": "Not provided",
-
-    "bio": "No matching member details were present in the supplied PDF.",
-
-    "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2026",
-
-    "linkedin": "",
-
-    "github": "",
-
-    "whatsapp": "",
-
-    "email": "",
-
-    "instagram": "",
+"25": {
+  name: "Rehna Riyas",
+  role: "Link Rep",
+  department: "Executive",
+  bio: "IEEE MACE SB Link Representative.",
+  avatar: "IMG_6220%20-%20Rehna%20Riyas.jpeg",
+  linkedin: "",
+  github: "",
+  whatsapp: "https://wa.me/917907166807",
+  email: "",
+  instagram: "https://www.instagram.com/a_her/"
+}
 
     "photo_drive_link": ""
 
