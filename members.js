@@ -595,17 +595,34 @@ const members = {
 },
 
 "25": {
-  name: "Rehna Riyas",
-  role: "Link Rep",
-  department: "Executive",
-  bio: "IEEE MACE SB Link Representative.",
-  avatar: "IMG_6220%20-%20Rehna%20Riyas.jpeg",
-  linkedin: "",
-  github: "",
-  whatsapp: "https://wa.me/917907166807",
-  email: "",
-  instagram: "https://www.instagram.com/a_her/"
+  "name": "Rehna Riyas",
+  "role": "Link Rep",
+  "department": "Executive",
+  "bio": "IEEE MACE SB Link Representative.",
+  "avatar": "IMG_6220 - Rehna Riyas.jpeg",
+  "linkedin": "",
+  "github": "",
+  "whatsapp": "https://wa.me/917907166807",
+  "email": "",
+  "instagram": "https://www.instagram.com/a_her/",
+  "photo_drive_link": ""
+},
+
+"26": {
+  "name": "Member 26 — details needed",
+  "role": "Not provided in PDF",
+  "department": "Not provided",
+  "bio": "No matching member details were present in the supplied PDF.",
+  "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Member%2026",
+  "linkedin": "",
+  "github": "",
+  "whatsapp": "",
+  "email": "",
+  "instagram": "",
+  "photo_drive_link": ""
 }
+
+};
 
     "photo_drive_link": ""
 
