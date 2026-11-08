@@ -624,8 +624,3 @@ const members = {
 
 };
 
-    "photo_drive_link": ""
-
-  }
-
-};
